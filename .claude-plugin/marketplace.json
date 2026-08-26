@@ -6,5 +6,15 @@
     "name": "seto",
     "email": "prod.seto@proton.me"
   },
-  "plugins": []
+  "plugins": [
+    {
+      "name": "graphstack",
+      "description": "Graph-engineering pipeline (Think -> Plan -> Build -> Review -> Test -> Ship -> Reflect) powered by logic ported from gstack, over a local task backlog and append-only review/evidence ledgers.",
+      "author": {
+        "name": "seto"
+      },
+      "category": "development",
+      "source": "./plugins/graphstack"
+    }
+  ]
 }

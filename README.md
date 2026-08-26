@@ -6,7 +6,8 @@ Claude Code plugin marketplace. Users add this catalog, then install individual 
 
 ```
 .claude-plugin/marketplace.json   # catalog: name, owner, plugins
-plugins/<plugin-name>/            # one directory per in-repo plugin
+plugins/graphstack/               # Think -> Plan -> Build -> Review -> Test -> Ship -> Reflect
+plugins/<plugin-name>/            # additional in-repo plugins
   .claude-plugin/plugin.json      # plugin manifest (required)
   commands/                       # optional slash commands
   skills/                         # optional skills
@@ -37,7 +38,7 @@ After the repo is on GitHub:
 Install a listed plugin:
 
 ```
-/plugin install <plugin-name>@ph-agent-plugins
+/plugin install graphstack@ph-agent-plugins
 ```
 
 Refresh after catalog changes:
