@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "ph-agent-plugins",
+  "description": "Agent plugin marketplace for Claude Code plugins.",
+  "owner": {
+    "name": "seto",
+    "email": "prod.seto@proton.me"
+  },
+  "plugins": []
+}
