@@ -1,0 +1,24 @@
+{
+  "name": "ph-agent-plugins",
+  "owner": {
+    "name": "seto",
+    "email": "prod.seto@proton.me"
+  },
+  "metadata": {
+    "description": "Agent plugin marketplace: graphstack pipeline and The Heist crew.",
+    "pluginRoot": "plugins"
+  },
+  "plugins": [
+    {
+      "name": "graphstack",
+      "source": "graphstack",
+      "description": "Graph-engineering pipeline (Think -> Plan -> Build -> Review -> Test -> Ship -> Reflect) over a local task backlog and append-only review/evidence ledgers."
+    },
+    {
+      "name": "the-heist",
+      "source": "the-heist",
+      "description": "The Heist: Crew of Thieves — Mastermind (think), Forger (UI design), Safecracker (implement), with Lookout audits and Cleaner code review.",
+      "license": "MIT"
+    }
+  ]
+}

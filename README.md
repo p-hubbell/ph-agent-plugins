@@ -5,11 +5,13 @@ Claude Code plugin marketplace. Users add this catalog, then install individual 
 ## Layout
 
 ```
-.claude-plugin/marketplace.json   # catalog: name, owner, plugins
+.claude-plugin/marketplace.json   # Claude Code catalog
+.cursor-plugin/marketplace.json   # Cursor catalog (pluginRoot: plugins/)
 plugins/graphstack/               # Think -> Plan -> Build -> Review -> Test -> Ship -> Reflect
 plugins/the-heist/                # Mastermind -> (Forger) -> Safecracker, with Lookout + Cleaner
 plugins/<plugin-name>/            # additional in-repo plugins
-  .claude-plugin/plugin.json      # plugin manifest (required)
+  .claude-plugin/plugin.json      # Claude Code plugin manifest
+  .cursor-plugin/plugin.json      # Cursor plugin manifest
   commands/                       # optional slash commands
   skills/                         # optional skills
   agents/                         # optional agents
@@ -22,7 +24,27 @@ Component directories live at the plugin root, never inside `.claude-plugin/`. O
 
 Plugin sources in `marketplace.json` are relative to this repo root (for example `./plugins/my-plugin`), not to `.claude-plugin/`.
 
-## Add this marketplace
+## Cursor (this machine)
+
+Claude Code `/plugin marketplace update` is not what loads plugins here. Cursor discovers local plugins from `~/.cursor/plugins/local/<name>/`, which must contain `.cursor-plugin/plugin.json`.
+
+Graphstack is already a symlink:
+
+```
+~/.cursor/plugins/local/graphstack -> ~/projects/ph-agent-plugins/plugins/graphstack
+```
+
+Do the same for The Heist, then **Developer: Reload Window**:
+
+```
+ln -sfn ~/projects/ph-agent-plugins/plugins/the-heist ~/.cursor/plugins/local/the-heist
+```
+
+After reload, the crew should show up under Customize → Plugins, with `/mastermind`, `/forger`, `/safecracker` as skills and the Lookout/Cleaner as subagents.
+
+If you import this Git repo as a Cursor team marketplace, `.cursor-plugin/marketplace.json` is the catalog to refresh (Dashboard → Plugins → Refresh), not the Claude Code command.
+
+## Add this marketplace (Claude Code)
 
 Local path (no remote required):
 
