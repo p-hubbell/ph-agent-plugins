@@ -1,0 +1,10 @@
+{
+  "name": "the-heist",
+  "version": "0.1.0",
+  "description": "The Heist: Crew of Thieves — Mastermind (think), Forger (UI design), Safecracker (implement), with Lookout audits and Cleaner code review.",
+  "author": {
+    "name": "seto"
+  },
+  "license": "MIT",
+  "keywords": ["planning", "implementation", "design", "code-review", "agents"]
+}

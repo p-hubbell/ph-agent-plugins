@@ -7,6 +7,7 @@ Claude Code plugin marketplace. Users add this catalog, then install individual 
 ```
 .claude-plugin/marketplace.json   # catalog: name, owner, plugins
 plugins/graphstack/               # Think -> Plan -> Build -> Review -> Test -> Ship -> Reflect
+plugins/the-heist/                # Mastermind -> (Forger) -> Safecracker, with Lookout + Cleaner
 plugins/<plugin-name>/            # additional in-repo plugins
   .claude-plugin/plugin.json      # plugin manifest (required)
   commands/                       # optional slash commands
@@ -39,6 +40,7 @@ Install a listed plugin:
 
 ```
 /plugin install graphstack@ph-agent-plugins
+/plugin install the-heist@ph-agent-plugins
 ```
 
 Refresh after catalog changes:

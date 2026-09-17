@@ -15,6 +15,16 @@
       },
       "category": "development",
       "source": "./plugins/graphstack"
+    },
+    {
+      "name": "the-heist",
+      "description": "The Heist: Crew of Thieves — Mastermind (think), Forger (UI design), Safecracker (implement), with Lookout audits and Cleaner code review.",
+      "author": {
+        "name": "seto"
+      },
+      "category": "development",
+      "source": "./plugins/the-heist",
+      "license": "MIT"
     }
   ]
 }
